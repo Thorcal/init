@@ -1,0 +1,1 @@
+host $(nslookup -type=soa slash16.org | grep "origin" | cut -d " " -f3) | grep "has address" | cut -d " " -f4

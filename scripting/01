@@ -1,0 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    01                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: spuisais <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/02/04 16:48:06 by spuisais          #+#    #+#              #
+#    Updated: 2019/02/04 16:56:22 by spuisais         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/bash
+
+getent passwd | while IFS=: read -r name password uid gid gecos home shell; do
+  echo "$name's home directory is $home"
+done
